@@ -130,10 +130,9 @@ header h1 {
 
 .speakers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-    align-items: stretch;
 }
 
 .speaker-card {
@@ -145,6 +144,9 @@ header h1 {
     display: flex;
     flex-direction: column;
     aspect-ratio: 1;
+    width: 300px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .speaker-card:hover {
@@ -202,6 +204,18 @@ header h1 {
     font-size: 0.9rem;
     line-height: 1.5;
     flex-grow: 1;
+}
+
+.speakers {
+    padding: 3rem 0;
+    background: #f9f9f9;
+}
+
+.speakers h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
 }
 
 .organizers {
@@ -302,6 +316,140 @@ footer {
     padding: 2rem 0;
 }
 
+/* Speaker Details Page Styles */
+.speaker-details {
+    padding: 3rem 0;
+    background: white;
+}
+
+.speaker-detail-item {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.speaker-detail-item .speaker-info {
+    display: flex;
+    gap: 1.5rem;
+    width: 450px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.speaker-detail-item .speaker-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #667eea;
+    flex-shrink: 0;
+}
+
+.speaker-detail-item .speaker-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.speaker-detail-item .speaker-affiliation {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.speaker-detail-item .speaker-date {
+    color: #667eea;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.talk-details {
+    flex: 1;
+}
+
+.talk-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.talk-description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Speaker Item Styles for Index Page */
+.speaker-item {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.speaker-item .speaker-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border: 4px solid #667eea;
+}
+
+.speaker-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.speaker-item .speaker-affiliation {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-item .speaker-date {
+    color: #667eea;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    display: inline-block;
+}
+
 @media (max-width: 1024px) {
     .organizers-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -336,5 +484,43 @@ footer {
     .speaker-photo {
         margin-right: 0;
         margin-bottom: 1rem;
+    }
+
+    .speaker-detail-item {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .speaker-detail-item .speaker-info {
+        min-width: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .speaker-detail-item .speaker-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .talk-title {
+        font-size: 1.2rem;
+    }
+
+    .talk-description {
+        text-align: left;
+    }
+
+    .speakers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .speaker-item {
+        padding: 1.5rem;
+    }
+
+    .speaker-item .speaker-photo {
+        width: 100px;
+        height: 100px;
     }
 }
