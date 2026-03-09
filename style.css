@@ -525,3 +525,39 @@ footer {
         height: 100px;
     }
 }
+
+.speaker-detail-item .speaker-info.multi-speaker {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 450px;
+    flex-shrink: 0;
+    align-items: stretch;
+}
+
+.speaker-detail-item .speaker-person {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.speaker-detail-item .speaker-info.multi-speaker .speaker-date {
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+    .speaker-detail-item .speaker-info.multi-speaker {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .speaker-detail-item .speaker-person {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .speaker-detail-item .speaker-info.multi-speaker .speaker-date {
+        align-self: center;
+    }
+}
