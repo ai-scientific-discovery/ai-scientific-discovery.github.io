@@ -325,6 +325,7 @@ footer {
 
 .speaker-detail-item {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
     margin-bottom: 3rem;
     padding: 2rem;
@@ -381,6 +382,9 @@ footer {
 
 .talk-details {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 .talk-title {
@@ -396,6 +400,31 @@ footer {
     font-size: 1rem;
     line-height: 1.7;
     text-align: justify;
+}
+
+.speaker-bio {
+    display: block;
+    width: 100%;
+    clear: both;
+    flex-basis: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #d9e0ff;
+}
+
+.speaker-bio-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.speaker-bio-text {
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.7;
 }
 
 /* Speaker Item Styles for Index Page */
@@ -508,6 +537,10 @@ footer {
     }
 
     .talk-description {
+        text-align: left;
+    }
+
+    .speaker-bio-text {
         text-align: left;
     }
 
