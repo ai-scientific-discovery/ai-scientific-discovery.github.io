@@ -427,6 +427,55 @@ footer {
     line-height: 1.7;
 }
 
+.speaker-references {
+    display: block;
+    width: 100%;
+    clear: both;
+    flex-basis: 100%;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #d9e0ff;
+}
+
+.speaker-references-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.speaker-references-list {
+    list-style: none;
+    padding: 0;
+}
+
+.speaker-references-list li {
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.speaker-references-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.speaker-references-list li a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.speaker-references-list li a:hover {
+    text-decoration: underline;
+}
+
 /* Speaker Item Styles for Index Page */
 .speaker-item {
     text-align: center;
